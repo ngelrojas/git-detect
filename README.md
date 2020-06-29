@@ -17,7 +17,7 @@ git clone inside your project and follow the script
 go to follow instructions
 
 - clone the repo
-- copy to the bin/ folder
+- copy in bin/ folder
 - open to .bashrc or .zshrc file
 - writte command below
 ```bash
@@ -25,3 +25,4 @@ go to follow instructions
 ``` 
 
 #### run script 
+- git-detect
