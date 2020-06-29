@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 
 # display files affected
 echo "changes on files $(git ls-files -m)"
