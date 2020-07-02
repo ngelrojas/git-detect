@@ -1,16 +1,38 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash 
 
-# display files affected
-echo "changes on files $(git ls-files -m)"
+# show message
+messages(){
+    success=`tput setaf 2`
+    printf "${success}FILES READY TO PUSH...!\n"
+}
 
-# save names files in var NAME_FILES
-NAME_FILES=$(git status --porcelain|tr '\n' ' ')
+# comment is empty, put a default comment
+# in the otherhand nothing to do.
+defaultComment(){
+    if [ -z "${comments}" ]
+    then
+        echo "there are comments default"
+        git commit -m "${file}"
+    fi
+}
 
-# add all files affected
-git add .
+# function main. 
+mainDetect(){
+    for file in $files; do
+        echo $file
+        git add $file
+        read -p "enter a comment: " comments
+        defaultComment "$comments"
+        git commit -m "${comments}"
+        echo ""
+    done
+}
 
-# commit with all files with each name affected
-git commit -m "your files affected: ${NAME_FILES}"
+# get all files effected with changes or added.
+files=$(git status --porcelain | cut -b4-)
 
-# message ready to push
-echo "your files are commited, ready to push...!"
+# call function main.
+mainDetect "$files" 
+
+# print message to ready to push.
+messages
