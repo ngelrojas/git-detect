@@ -16,8 +16,7 @@ git clone inside your project and follow the script
 
 follow instructions
 
-- clone the repo
-- copy in bin/ folder
+- clone repo in your path folder
 - open to .bashrc or .zshrc file
 - writte command below
 ```bash
