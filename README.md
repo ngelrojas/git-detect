@@ -21,7 +21,7 @@ go to follow instructions
 - open to .bashrc or .zshrc file
 - writte command below
 ```bash
-    export PATH=$PATH:/bin/git-detect
+    export PATH=PATH/YOUR/USER/git-detect
 ``` 
 
 #### run script 
