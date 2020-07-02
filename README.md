@@ -14,7 +14,7 @@ git clone inside your project and follow the script
 
 #### install globally
 
-go to follow instructions
+follow instructions
 
 - clone the repo
 - copy in bin/ folder
