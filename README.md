@@ -12,16 +12,5 @@ git clone inside your project and follow the script
     chmod +x git-detect
 ```
 
-#### install globally
-
-follow instructions
-
-- clone repo in your path folder
-- open to .bashrc or .zshrc file
-- writte command below
-```bash
-    export PATH=PATH/YOUR/USER/git-detect
-``` 
-
 #### run script 
-- git-detect
+- ./git-detect.sh
