@@ -2,7 +2,7 @@
 
 # function display all data affected
 displayFiles(){
-    git status
+    git ls-files
 }
 # function display message
 messages(){
