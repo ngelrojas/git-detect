@@ -1,13 +1,19 @@
 #!/usr/bin/env bash 
 
-# show message
+# function display all data affected
+displayFiles(){
+    git status
+}
+# function display message
 messages(){
     success=`tput setaf 2`
     printf "${success}FILES READY TO PUSH...!\n"
 }
 
-# comment is empty, put a default comment
-# in the otherhand nothing to do.
+# function defaultComment, put a comment the follow
+# actions like:
+# - comment is empty, put a default comment
+# - in the otherhand nothing to do.
 defaultComment(){
     if [ -z "${comments}" ]
     then
@@ -27,6 +33,9 @@ mainDetect(){
         echo ""
     done
 }
+
+# display files affected
+displayFiles
 
 # get all files effected with changes or added.
 files=$(git status --porcelain | cut -b4-)
